@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>Template Page</title>
+<title>About Us</title>
 <script>
 function getCookie(cname) {
   var name = cname + "=";
@@ -33,6 +33,11 @@ function manx(){
   document.body.className='gv';
   document.cookie = 'lang=gv; expires=Fri, 31 Dec 9999 23:59:59 GMT';
 }
+function spanish(){
+  document.body.className='es';
+  document.cookie = 'lang=es; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+
 var cookieGrab = getCookie("lang");
 </script>
 <style>
@@ -83,16 +88,19 @@ li a, .dropbtn {
   display: block;
 }
   
-body.en :lang(ga), body.en :lang(ja), body.en :lang(gv) {
+body.en :lang(ga), body.en :lang(ja), body.en :lang(gv), body.en :lang(es) {
   display: none;
 }
-body.ga :lang(en), body.ga :lang(ja), body.ga :lang(gv) {
+body.ga :lang(en), body.ga :lang(ja), body.ga :lang(gv), body.ga :lang(es) {
   display: none;
 }
-body.ja :lang(en), body.ja :lang(ga), body.ja :lang(gv) {
+body.ja :lang(en), body.ja :lang(ga), body.ja :lang(gv), body.ja :lang(es) {
   display: none;
 }
-body.gv :lang(en), body.gv :lang(ga), body.gv :lang(ja) {
+body.gv :lang(en), body.gv :lang(ga), body.gv :lang(ja), body.gv :lang(es) {
+  display: none;
+}
+body.es :lang(en), body.es :lang(ga), body.es :lang(ja), body.es :lang(gv) {
   display: none;
 }
 body {
@@ -137,6 +145,7 @@ font{
           <a href="javascript:void(0)" class="dropbtn"><img src="images/globe.png" width="20" height="20"></a>
             <div class="dropdown-content">
               <a onclick="english()">English</a>
+              <a onclick="spanish()">Español</a>
               <a onclick="irish()">Gaeilge</a>
               <a onclick="manx()">Gaelg</a>
               <a onclick="japanese()">日本語</a>
@@ -146,23 +155,28 @@ font{
       <li lang="ga"><a class="active" href="index.html">Baile</a></li>
       <li lang="gv"><a class="active" href="index.html">Çheer</a></li>
       <li lang="ja"><a class="active" href="index.html">家庭</a></li>
+      <li lang="es"><a class="active" href="index.html">Inicio</a></li>
       <li lang="en"><a class="active" href="guides.html">Guides</a></li>
       <li lang="ga"><a class="active" href="guides.html">Treoraeí</a></li>
       <li lang="gv"><a class="active" href="guides.html">Oayllagh</a></li>
       <li lang="ja"><a class="active" href="guides.html">ガイド</a></li>
+      <li lang="es"><a class="active" href="guides.html">Guías</a></li>
       <li lang="en"><a class="active" href="about.html">About Us</a></li>
       <li lang="ga"><a class="active" href="about.html">Faoi Sinn</a></li>
       <li lang="gv"><a class="active" href="about.html">Mooin</a></li>
       <li lang="ja"><a class="active" href="about.html">就いて</a></li>
+      <li lang="es"><a class="active" href="about.html">Sobre Nosotros</a></li>
       <li lang="en"><a class="active" href="contact.html">Contact Us</a></li>
       <li lang="ga"><a class="active" href="contact.html">Teagmháil Sinn</a></li>
       <li lang="gv"><a class="active" href="contact.html">Coventyn Shin</a></li>
       <li lang="ja"><a class="active" href="contact.html">連絡</a></li>
+      <li lang="es"><a class="active" href="contact.html">Contactar Con Nosotros</a></li>
     </ul>
   </div>
 <center>
 <font size="15">
   <class lang="en">About Us</class>
+  <class lang="es">Sobre Nosotros</class>
   <class lang="ga">Header (irish)</class>
   <class lang="ja">Header (japanese)</class>
   <class lang="gv">Header (manx)</class>
@@ -170,7 +184,7 @@ font{
 <br>
 <font>
 <class lang="en"> Valspir is a small group based in Australia, we make terrible games that can be completed in minutes. We have only created one game (Shadows and Souls) so far, but we are working tirelessly on creating more games that no one will play.</class>
-<class lang="ja"> Valspir es un pequeño grupo basado en Australia, nosotros hacer terrible juegos que poder ser completo en minuto. Nosotros tener solo crear uno jueogo (Shadows and Souls) hasta ahora, pero nosotros ser laboral incansablemente en crear more juegos que nadie voluntad jugar.</class>
+<class lang="es"> Valspir es un pequeño grupo basado en Australia, nosotros hacer terrible juegos que poder ser completo en minuto. Nosotros tener solo crear uno jueogo (Shadows and Souls) hasta ahora, pero nosotros ser laboral incansablemente en crear more juegos que nadie voluntad jugar.</class>
 <class lang="ga"> Text (irish)</class>
 <class lang="gv"> Text (manx)</class>
 </font>
