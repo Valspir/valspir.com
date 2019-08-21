@@ -33,7 +33,6 @@ function manx(){
   document.body.className='gv';
   document.cookie = 'lang=gv';
 }
-
 var cookieGrab = getCookie("lang");
 </script>
 <style>
@@ -44,11 +43,9 @@ ul {
   overflow: hidden;
   background-color: #333;
 }
-
 li {
   float: left;
 }
-
 li a {
   display: block;
   color: white;
@@ -56,11 +53,36 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
-li a:hover {
+li a:hover, .dropdown:hover .dropbtn {
   background-color: #53aff5;
 }
-
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
 body.en :lang(ga), body.en :lang(ja), body.en :lang(gv) {
   display: none;
 }
@@ -92,13 +114,11 @@ pre {
 form {
     display: inline;
 }
-
 div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
-
 font{
   color: #53aff5;
 }
@@ -113,10 +133,19 @@ font{
   </script>
   <div class="sticky">
     <ul>
-      <li lang="en"><a class="active" href="../index.html">Home</a></li>
-      <li lang="ga"><a class="active" href="../index.html">Baile</a></li>
-      <li lang="gv"><a class="active" href="../index.html">Çheer</a></li>
-      <li lang="ja"><a class="active" href="../index.html">家庭</a></li>
+      <li class="dropdown" style="float:left">
+          <a href="javascript:void(0)" class="dropbtn"><img src="images/globe.png" width="20" height="20"></a>
+            <div class="dropdown-content">
+              <a onclick="english()">English</a>
+              <a onclick="irish()">Gaeilge</a>
+              <a onclick="manx()">Gaelg</a>
+              <a onclick="japanese()">日本語</a>
+            </div>
+      </li>
+      <li lang="en"><a class="active" href="index.html">Home</a></li>
+      <li lang="ga"><a class="active" href="index.html">Baile</a></li>
+      <li lang="gv"><a class="active" href="index.html">Çheer</a></li>
+      <li lang="ja"><a class="active" href="index.html">家庭</a></li>
       <li lang="en"><a class="active" href="guides.html">Guides</a></li>
       <li lang="ga"><a class="active" href="guides.html">Treoraeí</a></li>
       <li lang="gv"><a class="active" href="guides.html">Oayllagh</a></li>
@@ -145,10 +174,4 @@ font{
 <class lang="ga"> Text (irish)</class>
 <class lang="gv"> Text (manx)</class>
 </font>
-<br>
-<br>
-<button onclick="english()">English</button>
-<button onclick="irish()">Gaeilge</button>
-<button onclick="manx()">Gaelg</button>
-<button onclick="japanese()">日本語</button>
 </center>
