@@ -19,20 +19,21 @@ function getCookie(cname) {
 }
 function english() {
   document.body.className='en';
-  document.cookie = 'lang=en; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+  document.cookie = 'lang=en';
 }
 function irish() {
   document.body.className='ga';
-  document.cookie = 'lang=ga; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+  document.cookie = 'lang=ga';
 }
 function japanese(){
   document.body.className='ja';
-  document.cookie = 'lang=ja; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+  document.cookie = 'lang=ja';
 }
 function manx(){
   document.body.className='gv';
-  document.cookie = 'lang=gv; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+  document.cookie = 'lang=gv';
 }
+
 var cookieGrab = getCookie("lang");
 </script>
 <style>
@@ -43,9 +44,11 @@ ul {
   overflow: hidden;
   background-color: #333;
 }
+
 li {
   float: left;
 }
+
 li a {
   display: block;
   color: white;
@@ -53,36 +56,11 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-li a:hover, .dropdown:hover .dropbtn {
+
+li a:hover {
   background-color: #53aff5;
 }
-li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.dropdown-content a:hover {background-color: #f1f1f1;}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-  
+
 body.en :lang(ga), body.en :lang(ja), body.en :lang(gv) {
   display: none;
 }
@@ -114,11 +92,13 @@ pre {
 form {
     display: inline;
 }
+
 div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+
 font{
   color: #53aff5;
 }
@@ -133,15 +113,6 @@ font{
   </script>
   <div class="sticky">
     <ul>
-      <li class="dropdown" style="float:left">
-          <a href="javascript:void(0)" class="dropbtn"><img src="images/globe.png" width="20" height="20"></a>
-            <div class="dropdown-content">
-              <a onclick="english()">English</a>
-              <a onclick="irish()">Gaeilge</a>
-              <a onclick="manx()">Gaelg</a>
-              <a onclick="japanese()">日本語</a>
-            </div>
-      </li>
       <li lang="en"><a class="active" href="index.html">Home</a></li>
       <li lang="ga"><a class="active" href="index.html">Baile</a></li>
       <li lang="gv"><a class="active" href="index.html">Çheer</a></li>
@@ -162,16 +133,22 @@ font{
   </div>
 <center>
 <font size="15">
-  <class lang="en">Header (english)</class>
+  <class lang="en">About Us</class>
   <class lang="ga">Header (irish)</class>
   <class lang="ja">Header (japanese)</class>
   <class lang="gv">Header (manx)</class>
 </font>
 <br>
 <font>
-<class lang="en"> Text (english)</class>
+<class lang="en"> Valspir is a small group based in Australia, we make pretty terrible games, that can be completed in minutes. We have only created one game (Shadows and Souls) so far, but we are working tirelessly on creating more games that no one will play.</class>
 <class lang="ja"> Text (japanese)</class>
 <class lang="ga"> Text (irish)</class>
 <class lang="gv"> Text (manx)</class>
 </font>
+<br>
+<br>
+<button onclick="english()">English</button>
+<button onclick="irish()">Gaeilge</button>
+<button onclick="manx()">Gaelg</button>
+<button onclick="japanese()">日本語</button>
 </center>
