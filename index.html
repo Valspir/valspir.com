@@ -35,6 +35,10 @@ function manx(){
 }
 
 var cookieGrab = getCookie("lang");
+var defaultLang = navigator.language;
+if (!(defaultLang == "gv" || defaultLang == "ja" || defaultLang == "ga")) {
+  defaultLang = "en";
+}
 </script>
 <style>
 ul {
@@ -141,7 +145,7 @@ font{
   <script>
     document.body.className = cookieGrab;
     if (cookieGrab == null || cookieGrab == "") {
-      document.body.className = "en";
+      document.body.className = defaultLang;
     }
   </script>
   <div class="sticky">
@@ -195,7 +199,7 @@ font{
    `--. \  _  | `--. \
   /\__/ / | | |/\__/ /
  \____/\_| |_/\____/
-  
+
   </pre>
 </center>
 <br>
