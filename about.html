@@ -33,16 +33,7 @@ function manx(){
   document.body.className='gv';
   document.cookie = 'lang=gv; expires=Fri, 31 Dec 9999 23:59:59 GMT';
 }
-function spanish(){
-  document.body.className='es';
-  document.cookie = 'lang=es; expires=Fri, 31 Dec 9999 23:59:59 GMT';
-}
-
 var cookieGrab = getCookie("lang");
-var defaultLang = navigator.language;
-if (!(defaultLang == "gv" || defaultLang == "ja" || defaultLang == "ga" || defaultLang == "es")) {
-  defaultLang = "en";
-}
 </script>
 <style>
 ul {
@@ -52,11 +43,9 @@ ul {
   overflow: hidden;
   background-color: #333;
 }
-
 li {
   float: left;
 }
-
 li a {
   display: block;
   color: white;
@@ -64,7 +53,6 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 li a:hover, .dropdown:hover .dropbtn {
   background-color: #53aff5;
 }
@@ -83,7 +71,6 @@ li a, .dropbtn {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -91,26 +78,21 @@ li a, .dropbtn {
   display: block;
   text-align: left;
 }
-
 .dropdown-content a:hover {background-color: #f1f1f1;}
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-body.en :lang(ga), body.en :lang(ja), body.en :lang(gv), body.en :lang(es) {
+  
+body.en :lang(ga), body.en :lang(ja), body.en :lang(gv) {
   display: none;
 }
-body.ga :lang(en), body.ga :lang(ja), body.ga :lang(gv), body.ga :lang(es) {
+body.ga :lang(en), body.ga :lang(ja), body.ga :lang(gv) {
   display: none;
 }
-body.ja :lang(en), body.ja :lang(ga), body.ja :lang(gv), body.ja :lang(es) {
+body.ja :lang(en), body.ja :lang(ga), body.ja :lang(gv) {
   display: none;
 }
-body.gv :lang(en), body.gv :lang(ga), body.gv :lang(ja), body.gv :lang(es) {
-  display: none;
-}
-body.es :lang(en), body.es :lang(ga), body.es :lang(ja), body.es :lang(gv) {
+body.gv :lang(en), body.gv :lang(ga), body.gv :lang(ja) {
   display: none;
 }
 body {
@@ -132,13 +114,11 @@ pre {
 form {
     display: inline;
 }
-
 div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
-
 font{
   color: #53aff5;
 }
@@ -148,7 +128,7 @@ font{
   <script>
     document.body.className = cookieGrab;
     if (cookieGrab == null || cookieGrab == "") {
-      document.body.className = defaultLang;
+      document.body.className = "en";
     }
   </script>
   <div class="sticky">
@@ -157,7 +137,6 @@ font{
           <a href="javascript:void(0)" class="dropbtn"><img src="images/globe.png" width="20" height="20"></a>
             <div class="dropdown-content">
               <a onclick="english()">English</a>
-              <a onclick="spanish()">Español</a>
               <a onclick="irish()">Gaeilge</a>
               <a onclick="manx()">Gaelg</a>
               <a onclick="japanese()">日本語</a>
@@ -167,38 +146,32 @@ font{
       <li lang="ga"><a class="active" href="index.html">Baile</a></li>
       <li lang="gv"><a class="active" href="index.html">Çheer</a></li>
       <li lang="ja"><a class="active" href="index.html">家庭</a></li>
-      <li lang="es"><a class="active" href="index.html">Casa</a></li>
       <li lang="en"><a class="active" href="guides.html">Guides</a></li>
       <li lang="ga"><a class="active" href="guides.html">Treoraeí</a></li>
       <li lang="gv"><a class="active" href="guides.html">Oayllagh</a></li>
       <li lang="ja"><a class="active" href="guides.html">ガイド</a></li>
-      <li lang="es"><a class="active" href="guides.html">Guías</a></li>
       <li lang="en"><a class="active" href="about.html">About Us</a></li>
       <li lang="ga"><a class="active" href="about.html">Faoi Sinn</a></li>
       <li lang="gv"><a class="active" href="about.html">Mooin</a></li>
       <li lang="ja"><a class="active" href="about.html">就いて</a></li>
-      <li lang="es"><a class="active" href="about.html">Sobre Nosotros</a></li>
       <li lang="en"><a class="active" href="contact.html">Contact Us</a></li>
       <li lang="ga"><a class="active" href="contact.html">Teagmháil Sinn</a></li>
       <li lang="gv"><a class="active" href="contact.html">Coventyn Shin</a></li>
       <li lang="ja"><a class="active" href="contact.html">連絡</a></li>
-      <li lang="es"><a class="active" href="contact.html">Contactar Con Nosotros</a></li>
     </ul>
   </div>
 <center>
 <font size="15">
-  <class lang="en">Header (english)</class>
+  <class lang="en">About Us</class>
   <class lang="ga">Header (irish)</class>
   <class lang="ja">Header (japanese)</class>
   <class lang="gv">Header (manx)</class>
-  <class lang="es">Header (spanish)</class>
 </font>
 <br>
 <font>
-<class lang="en"> Text (english)</class>
-<class lang="ja"> Text (japanese)</class>
+<class lang="en"> Valspir is a small group based in Australia, we make terrible games that can be completed in minutes. We have only created one game (Shadows and Souls) so far, but we are working tirelessly on creating more games that no one will play.</class>
+<class lang="ja"> Valspir es un pequeño grupo basado en Australia, nosotros hacer terrible juegos que poder ser completo en minuto. Nosotros tener solo crear uno jueogo (Shadows and Souls) hasta ahora, pero nosotros ser laboral incansablemente en crear more juegos que nadie voluntad jugar.</class>
 <class lang="ga"> Text (irish)</class>
 <class lang="gv"> Text (manx)</class>
-<class lang="es"> Test (spanish)</class>
 </font>
 </center>
