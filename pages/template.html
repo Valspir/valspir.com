@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+<title>Template Page</title>
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function english() {
+  document.body.className='en';
+  document.cookie = 'lang=en';
+}
+function irish() {
+  document.body.className='ga';
+  document.cookie = 'lang=ga';
+}
+function japanese(){
+  document.body.className='ja';
+  document.cookie = 'lang=ja';
+}
+function manx(){
+  document.body.className='gv';
+  document.cookie = "lang=gv";
+}
+
+var cookieGrab = getCookie("lang");
+</script>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #53aff5;
+}
+
+body.en :lang(ga), body.en :lang(ja), body.en :lang(gv) {
+  display: none;
+}
+body.ga :lang(en), body.ga :lang(ja), body.ga :lang(gv) {
+  display: none;
+}
+body.ja :lang(en), body.ja :lang(ga), body.ja :lang(gv) {
+  display: none;
+}
+body.gv :lang(en), body.gv :lang(ga), body.gv :lang(ja) {
+  display: none;
+}
+body {
+    background-color: #3b3e40;
+}
+pre {
+    color: #53aff5;
+}
+.btn {
+  border-radius: 25px;
+  background: "apple.png";
+  background-color: #53aff5;
+  border: none;
+  color: #3b3e40;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+form {
+    display: inline;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+font{
+  color: #53aff5;
+}
+</style>
+</head>
+<body class="en">
+  <script>
+    document.body.className = cookieGrab;
+    if (cookieGrab == null || cookieGrab == "") {
+      document.body.className = "en";
+    }
+  </script>
+  <div class="sticky">
+    <ul>
+      <li lang="en"><a class="active" href="../index.html">Home</a></li>
+      <li lang="ga"><a class="active" href="../index.html">Baile</a></li>
+      <li lang="gv"><a class="active" href="../index.html">Çheer</a></li>
+      <li lang="ja"><a class="active" href="../index.html">家庭</a></li>
+      <li lang="en"><a class="active" href="guides.html">Guides</a></li>
+      <li lang="ga"><a class="active" href="guides.html">Treoraeí</a></li>
+      <li lang="gv"><a class="active" href="guides.html">Oayllagh</a></li>
+      <li lang="ja"><a class="active" href="guides.html">ガイド</a></li>
+      <li lang="en"><a class="active" href="about.html">About Us</a></li>
+      <li lang="ga"><a class="active" href="about.html">Faoi Sinn</a></li>
+      <li lang="gv"><a class="active" href="about.html">Mooin</a></li>
+      <li lang="ja"><a class="active" href="about.html">就いて</a></li>
+      <li lang="en"><a class="active" href="contact.html">Contact Us</a></li>
+      <li lang="ga"><a class="active" href="contact.html">Teagmháil Sinn</a></li>
+      <li lang="gv"><a class="active" href="contact.html">Coventyn Shin</a></li>
+      <li lang="ja"><a class="active" href="contact.html">連絡</a></li>
+    </ul>
+  </div>
+<center>
+<font size="15">
+  <class lang="en">Header (english)</class>
+  <class lang="ga">Header (irish)</class>
+  <class lang="ja">Header (japanese)</class>
+  <class lang="gv">Header (manx)</class>
+</font>
+<br>
+<font>
+<class lang="en"> Text (english)</class>
+<class lang="ja"> Text (japanese)</class>
+<class lang="ga"> Text (irish)</class>
+<class lang="gv"> Text (manx)</class>
+</font>
+<br>
+<br>
+<button onclick="english()">English</button>
+<button onclick="irish()">Gaeilge</button>
+<button onclick="manx()">Gaelg</button>
+<button onclick="japanese()">日本人</button>
+</center>

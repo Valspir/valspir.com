@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+<title>Valspir Home</title>
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function english() {
+  document.body.className='en';
+  document.cookie = 'lang=en';
+}
+function irish() {
+  document.body.className='ga';
+  document.cookie = 'lang=ga';
+}
+function japanese(){
+  document.body.className='ja';
+  document.cookie = 'lang=ja';
+}
+function manx(){
+  document.body.className='gv';
+  document.cookie = "lang=gv";
+}
+
+var cookieGrab = getCookie("lang");
+</script>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #53aff5;
+}
+
+body.en :lang(ga), body.en :lang(ja), body.en :lang(gv) {
+  display: none;
+}
+body.ga :lang(en), body.ga :lang(ja), body.ga :lang(gv) {
+  display: none;
+}
+body.ja :lang(en), body.ja :lang(ga), body.ja :lang(gv) {
+  display: none;
+}
+body.gv :lang(en), body.gv :lang(ga), body.gv :lang(ja) {
+  display: none;
+}
+body {
+    background-color: #3b3e40;
+}
+pre {
+    color: #53aff5;
+}
+.btn {
+  border-radius: 25px;
+  background: "apple.png";
+  background-color: #53aff5;
+  border: none;
+  color: #3b3e40;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+form {
+    display: inline;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+font{
+  color: #53aff5;
+}
+</style>
+</head>
+<body class="en">
+  <script>
+    document.body.className = cookieGrab;
+    if (cookieGrab == null || cookieGrab == "") {
+      document.body.className = "en";
+    }
+  </script>
+  <div class="sticky">
+    <ul>
+      <li lang="en"><a class="active" href="index.html">Home</a></li>
+      <li lang="ga"><a class="active" href="index.html">Baile</a></li>
+      <li lang="gv"><a class="active" href="index.html">Çheer</a></li>
+      <li lang="ja"><a class="active" href="index.html">家庭</a></li>
+      <li lang="en"><a class="active" href="pages/guides.html">Guides</a></li>
+      <li lang="ga"><a class="active" href="pages/guides.html">Treoraeí</a></li>
+      <li lang="gv"><a class="active" href="pages/guides.html">Oayllagh</a></li>
+      <li lang="ja"><a class="active" href="pages/guides.html">ガイド</a></li>
+      <li lang="en"><a class="active" href="pages/about.html">About Us</a></li>
+      <li lang="ga"><a class="active" href="pages/about.html">Faoi Sinn</a></li>
+      <li lang="gv"><a class="active" href="pages/about.html">Mooin</a></li>
+      <li lang="ja"><a class="active" href="pages/about.html">就いて</a></li>
+      <li lang="en"><a class="active" href="pages/contact.html">Contact Us</a></li>
+      <li lang="ga"><a class="active" href="pages/contact.html">Teagmháil Sinn</a></li>
+      <li lang="gv"><a class="active" href="pages/contact.html">Coventyn Shin</a></li>
+      <li lang="ja"><a class="active" href="pages/contact.html">連絡</a></li>
+    </ul>
+  </div>
+<center>
+  <font size="15">
+    <class lang="en">Valspir Games</class>
+    <class lang="ga">Cluichí Valspir</class>
+    <class lang="ja">ビャルスピアゲーム</class>
+    <class lang="gv">Gammanyn Valspir</class>
+  </font>
+<br>
+  <font>
+    <class lang="en"> Welcome to the Valspir website, this is where we publish our terrible games. They really are terrible. Don't download these.</class>
+    <class lang="ja"> ビャルスピアへようこそ。ここにひどいゲームを出版します。ほんとうにひどいゲームだからダーンロードしないで下さい。</class>
+    <class lang="ga"> Fáilte go an suíomh Valspir. Seo é áit a foilsimid ar cluichí uafásach. Tá siad an-uafásach. Ná íoslódáil iad seo.</class>
+    <class lang="gv"> Failt da y cur Valspir. Eh shoh ynnyd a soilshaghey shin ar gammanyn atçhimagh. T'ad cheddin atçhimagh. Ny laad neose ad shoh.</class>
+  </font>
+  <pre>
+
+   _____  ___   _____
+  /  ___|/ _ \ /  ___|
+  \ `--./ /_\ \\ `--.
+   `--. \  _  | `--. \
+  /\__/ / | | |/\__/ /
+  \____/\_| |_/\____/
+  </pre>
+</center>
+<br>
+<center>
+<a lang="en" href="downloads/sas/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  Download</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="en" href="downloads/sas/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  Download</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="en" href="downloads/sas/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  Download</a>
+</center>
+<center>
+<a lang="ga" href="downloads/sas/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  Íoslódáil</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ga" href="downloads/sas/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  Íoslódáil</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ga" href="downloads/sas/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  Íoslódáil</a>
+</center>
+<center>
+<a lang="ja" href="downloads/sas/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  ダウンロード</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ja" href="downloads/sas/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  ダウンロード</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ja" href="downloads/sas/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  ダウンロード</a>
+</center>
+<center>
+<a lang="gv" href="downloads/sas/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  Laad Neose</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="gv" href="downloads/sas/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  Laad Neose</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="gv" href="downloads/sas/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  Laad Neose</a>
+</center>
+<br>
+<br>
+<center>
+<button onclick="english()">English</button>
+<button onclick="irish()">Gaeilge</button>
+<button onclick="manx()">Gaelg</button>
+<button onclick="japanese()">日本人</button>
+</center>
+</body>
