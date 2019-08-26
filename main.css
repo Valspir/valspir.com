@@ -83,7 +83,7 @@ pre {
   cursor: pointer;
   font-size: 20px;
 }
-.btn {
+.btn.hover {
   color: #FFF
 }
 form {
