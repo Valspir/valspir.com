@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+<title>Template Page</title>
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function english() {
+  document.body.className='en';
+  document.cookie = 'lang=en; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function irish() {
+  document.body.className='ga';
+  document.cookie = 'lang=ga; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function japanese(){
+  document.body.className='ja';
+  document.cookie = 'lang=ja; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function manx(){
+  document.body.className='gv';
+  document.cookie = 'lang=gv; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function spanish(){
+  document.body.className='es';
+  document.cookie = 'lang=es; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+
+var cookieGrab = getCookie("lang");
+var defaultLang = navigator.language;
+if (!(defaultLang == "gv" || defaultLang == "ja" || defaultLang == "ga" || defaultLang == "es")) {
+  defaultLang = "en";
+}
+</script>
+<link rel="stylesheet" href="./main.css">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #53aff5;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+</style>
+</head>
+<body class="en">
+  <script>
+    document.body.className = cookieGrab;
+    if (cookieGrab == null || cookieGrab == "") {
+      document.body.className = defaultLang;
+    }
+  </script>
+  <div class="sticky">
+    <ul>
+      <li class="dropdown" style="float:left">
+          <a href="javascript:void(0)" class="dropbtn"><img src="images/globe.png" width="20" height="20"></a>
+            <div class="dropdown-content">
+              <a onclick="english()">English</a>
+              <a onclick="spanish()">Español</a>
+              <a onclick="irish()">Gaeilge</a>
+              <a onclick="manx()">Gaelg</a>
+              <a onclick="japanese()">日本語</a>
+            </div>
+      </li>
+      <li lang="en"><a class="active" href="index.html">Home</a></li>
+      <li lang="ga"><a class="active" href="index.html">Baile</a></li>
+      <li lang="gv"><a class="active" href="index.html">Çheer</a></li>
+      <li lang="ja"><a class="active" href="index.html">家庭</a></li>
+      <li lang="es"><a class="active" href="index.html">Casa</a></li>
+      <li lang="en"><a class="active" href="mods.html">Mods</a></li>
+      <li lang="ga"><a class="active" href="mods.html">Modhnuithe</a></li>
+      <li lang="gv"><a class="active" href="mods.html">Kiartaghey</a></li>
+      <li lang="ja"><a class="active" href="mods.html">変更</a></li>
+      <li lang="es"><a class="active" href="mods.html">Mods</a></li>
+      <li lang="en"><a class="active" href="guides.html">Guides</a></li>
+      <li lang="ga"><a class="active" href="guides.html">Treoraeí</a></li>
+      <li lang="gv"><a class="active" href="guides.html">Oayllagh</a></li>
+      <li lang="ja"><a class="active" href="guides.html">ガイド</a></li>
+      <li lang="es"><a class="active" href="guides.html">Guías</a></li>
+      <li lang="en"><a class="active" href="about.html">About Us</a></li>
+      <li lang="ga"><a class="active" href="about.html">Faoi Sinn</a></li>
+      <li lang="gv"><a class="active" href="about.html">Mooin</a></li>
+      <li lang="ja"><a class="active" href="about.html">就いて</a></li>
+      <li lang="es"><a class="active" href="about.html">Sobre Nosotros</a></li>
+      <li lang="en"><a class="active" href="contact.html">Contact Us</a></li>
+      <li lang="ga"><a class="active" href="contact.html">Teagmháil Sinn</a></li>
+      <li lang="gv"><a class="active" href="contact.html">Coventyn Shin</a></li>
+      <li lang="ja"><a class="active" href="contact.html">連絡</a></li>
+      <li lang="es"><a class="active" href="contact.html">Contactar Con Nosotros</a></li>
+    </ul>
+  </div>
+<center>
+<font size="15">
+  <class lang="en">Header (english)</class>
+  <class lang="ga">Header (irish)</class>
+  <class lang="ja">Header (japanese)</class>
+  <class lang="gv">Header (manx)</class>
+  <class lang="es">Header (spanish)</class>
+</font>
+<br>
+<font>
+<class lang="en"> Text (english)</class>
+<class lang="ja"> Text (japanese)</class>
+<class lang="ga"> Text (irish)</class>
+<class lang="gv"> Text (manx)</class>
+<class lang="es"> Test (spanish)</class>
+</font>
+</center>
