@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+<titleValspir Blog</title>
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function english() {
+  document.body.className='en';
+  document.cookie = 'lang=en; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function irish() {
+  document.body.className='ga';
+  document.cookie = 'lang=ga; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function japanese(){
+  document.body.className='ja';
+  document.cookie = 'lang=ja; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function manx(){
+  document.body.className='gv';
+  document.cookie = 'lang=gv; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function spanish(){
+  document.body.className='es';
+  document.cookie = 'lang=es; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+
+var cookieGrab = getCookie("lang");
+var defaultLang = navigator.language;
+if (!(defaultLang == "gv" || defaultLang == "ja" || defaultLang == "ga" || defaultLang == "es")) {
+  defaultLang = "en";
+}
+</script>
+<link rel="stylesheet" href="./main.css">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #53aff5;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+</style>
+</head>
+<body class="en">
+  <script>
+    document.body.className = cookieGrab;
+    if (cookieGrab == null || cookieGrab == "") {
+      document.body.className = defaultLang;
+    }
+  </script>
+  <div class="sticky">
+    <ul>
+      <li class="dropdown" style="float:left">
+          <a href="javascript:void(0)" class="dropbtn"><img src="images/globe.png" width="20" height="20"></a>
+            <div class="dropdown-content">
+              <a onclick="english()">English</a>
+              <a onclick="spanish()">Español</a>
+              <a onclick="irish()">Gaeilge</a>
+              <a onclick="manx()">Gaelg</a>
+              <a onclick="japanese()">日本語</a>
+            </div>
+      </li>
+      <li lang="en"><a class="active" href="index.html">Home</a></li>
+      <li lang="ga"><a class="active" href="index.html">Baile</a></li>
+      <li lang="gv"><a class="active" href="index.html">Çheer</a></li>
+      <li lang="ja"><a class="active" href="index.html">メイン</a></li>
+      <li lang="es"><a class="active" href="index.html">Casa</a></li>
+      <li lang="en"><a class="active" href="mods.html">Mods</a></li>
+      <li lang="ga"><a class="active" href="mods.html">Modhnuithe</a></li>
+      <li lang="gv"><a class="active" href="mods.html">Kiartaghey</a></li>
+      <li lang="ja"><a class="active" href="mods.html">変更</a></li>
+      <li lang="es"><a class="active" href="mods.html">Mods</a></li>
+      <li lang="en"><a class="active" href="guides.html">Guides</a></li>
+      <li lang="ga"><a class="active" href="guides.html">Treoraeí</a></li>
+      <li lang="gv"><a class="active" href="guides.html">Oayllagh</a></li>
+      <li lang="ja"><a class="active" href="guides.html">ガイド</a></li>
+      <li lang="es"><a class="active" href="guides.html">Guías</a></li>
+      <li lang="en"><a class="active" href="about.html">About Us</a></li>
+      <li lang="ga"><a class="active" href="about.html">Faoi Sinn</a></li>
+      <li lang="gv"><a class="active" href="about.html">Mooin</a></li>
+      <li lang="ja"><a class="active" href="about.html">就いて</a></li>
+      <li lang="es"><a class="active" href="about.html">Sobre Nosotros</a></li>
+      <li lang="en"><a class="active" href="contact.html">Contact Us</a></li>
+      <li lang="ga"><a class="active" href="contact.html">Teagmháil Sinn</a></li>
+      <li lang="gv"><a class="active" href="contact.html">Coventyn Shin</a></li>
+      <li lang="ja"><a class="active" href="contact.html">連絡</a></li>
+      <li lang="es"><a class="active" href="contact.html">Contactar Con Nosotros</a></li>
+    </ul>
+  </div>
+<center>
+<font size="15">
+  <class lang="en">Valspir Blog</class>
+  <class lang="ga">Header (irish)</class>
+  <class lang="ja">Header (japanese)</class>
+  <class lang="gv">Header (manx)</class>
+  <class lang="es">Header (spanish)</class>
+</font>
+<br>
+<font>
+<class lang="en"> Valspir is a game development group working on text based games, nothing huge but it's a learning experience for us. You can keep track of progress through this blog page</class>
+<class lang="en"> The name "Valspir" was used as my username for a few years before it became the name of our group. I registered the domain valspir.com originally as a recreational website in 2017 (Possibly earlier/later), it was inactive for a few months until it rested as a social media project I was creating, it didn't do anything special. The social media website was in development (basically sitting on my computer, hosted on my shitty wifi with no changes made for weeks at a time) until it became inactive again. The domain ran out 2 years after I originally purchased it, then it sat unregistered for about a year, until I had it reregistered with the help of one of the other members of Valspir, it was reregistered after I created my first game (Shadows and Souls, formerly Zork IV), I really enjoyed creating it but I wanted a bigger group (I originally had 2 other people, as it was for a school assignment), so I approached some of my friends with the idea of a game development group. We improved on my terrible code in Shadows and Souls, and started working on Shadows and Souls 2: Sins Unite, this game was similar to the original, but with one big difference, multiplayer, and I'm not talking local multiplayer, I wanted to make an online text-based game, I didn't know if anyone had done it before (I assumed people have, cause it is a pretty simple idea), but I wanted to try.</class>
+<class lang="en"> The biggest issue I have been facing is the online segment of the game, I am using sockets to send and receive the game data, but the client just acts as a husk for the server to control. I was able to get multiple connections working at a time, but I don't know what I did because now the code only allows one person at a time. The code breaking combined with Google Chrome corrupting my MacBook's hard drive is making this hell. I have a copy of the code on a USB, but I don't have access to it for a few weeks. The code on the USB works afaik, so that could be really helpful. Hopefully I will have a working server soon.</class>
+<class lang="en"> The game servers are probably going to be hosted through Amazon AWS, as they are the best solution I can think of at the moment</class>
+
+<class lang="ja"> Text (japanese)</class>
+<class lang="ga"> Text (irish)</class>
+<class lang="gv"> Text (manx)</class>
+<class lang="es"> Test (spanish)</class>
+</font>
+</center>
