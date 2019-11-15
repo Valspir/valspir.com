@@ -69,7 +69,7 @@ body.es :lang(en), body.es :lang(ga), body.es :lang(ja), body.es :lang(gv) {
   display: none;
 }
 body {
-    height: 1000px;
+    height: 824px;
     background-color: #3b3e40;
     background-image: linear-gradient(to bottom right, #1c1c1c, #3b3e40);
 }
