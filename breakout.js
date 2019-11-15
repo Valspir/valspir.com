@@ -60,7 +60,7 @@ const paddle = {
   // place the paddle horizontally in the middle of the screen
   x: canvas.width / 2 - brickWidth / 2,
   y: 440,
-  width: brickWidth + 10,
+  width: brickWidth,
   height: brickHeight,
 
   // paddle x velocity
