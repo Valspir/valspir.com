@@ -71,7 +71,7 @@ body.es :lang(en), body.es :lang(ga), body.es :lang(ja), body.es :lang(gv) {
 body {
     height: 824px;
     background-color: #3b3e40;
-    background-image: linear-gradient(to bottom right, #1c1c1c, #3b3e40);
+    background-image: linear-gradient(to bottom, #1c1c1c, #3b3e40);
 }
 pre {
     color: #53aff5;
