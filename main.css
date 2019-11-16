@@ -69,7 +69,10 @@ body.es :lang(en), body.es :lang(ga), body.es :lang(ja), body.es :lang(gv) {
   display: none;
 }
 body {
-    background-image: url("bg.png");
+  background-color: #737373;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("bg.png");;
 }
 pre {
     color: #53aff5;
@@ -98,5 +101,5 @@ div.sticky {
 }
 
 font{
-  /*color: #53aff5;*/
+  color: #53aff5;
 }
