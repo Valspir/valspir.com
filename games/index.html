@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="images/vspir.ico">
+<title>Valspir Home</title>
+
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function english() {
+  document.body.className='en';
+  document.cookie = 'lang=en; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function irish() {
+  document.body.className='ga';
+  document.cookie = 'lang=ga; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function japanese(){
+  document.body.className='ja';
+  document.cookie = 'lang=ja; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function manx(){
+  document.body.className='gv';
+  document.cookie = 'lang=gv; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+function spanish(){
+  document.body.className='es';
+  document.cookie = 'lang=es; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+
+var cookieGrab = getCookie("lang");
+var defaultLang = navigator.language;
+if (!(defaultLang == "gv" || defaultLang == "ja" || defaultLang == "ga" || defaultLang == "es")) {
+  defaultLang = "en";
+}
+</script>
+<link rel="stylesheet" href="./main.css">
+<!--<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #53aff5;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+</style>-->
+</head>
+<body class="en">
+  <script>
+    document.body.className = cookieGrab;
+    if (cookieGrab == null || cookieGrab == "") {
+      document.body.className = defaultLang;
+    }
+  </script>
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <div class="w3-dropdown-hover w3-black">
+      <button class="w3-button w3-hover-blue"><img src="images/globe.png" width="20" height="20"></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a onclick="english()" class="w3-bar-item w3-button">English</a>
+        <a onclick="spanish()" class="w3-bar-item w3-button">Español</a>
+        <a onclick="irish()" class="w3-bar-item w3-button">Gaeilge</a>
+        <a onclick="manx()" class="w3-bar-item w3-button">Gaelg</a>
+        <a onclick="japanese()" class="w3-bar-item w3-button">日本語</a>
+      </div>
+      </div>
+      <a lang="en" href="index.html" class="w3-bar-item w3-button w3-hover-blue">Home</a>
+      <a lang="es" href="index.html" class="w3-bar-item w3-button w3-hover-blue">Inicio</a>
+      <a lang="ga" href="index.html" class="w3-bar-item w3-button w3-hover-blue">Baile</a>
+      <a lang="gv" href="index.html" class="w3-bar-item w3-button w3-hover-blue">Çheer</a>
+      <a lang="ja" href="index.html" class="w3-bar-item w3-button w3-hover-blue">メイン</a>
+      <a lang="en" href="guides.html" class="w3-bar-item w3-button w3-hover-blue">Guides</a>
+      <a lang="es" href="guides.html" class="w3-bar-item w3-button w3-hover-blue">Guías</a>
+      <a lang="ga" href="guides.html" class="w3-bar-item w3-button w3-hover-blue">Treoraeí</a>
+      <a lang="gv" href="guides.html" class="w3-bar-item w3-button w3-hover-blue">Oayllagh</a>
+      <a lang="ja" href="guides.html" class="w3-bar-item w3-button w3-hover-blue">ガイド</a>
+      <a lang="en" href="about.html" class="w3-bar-item w3-button w3-hover-blue">About Us</a>
+      <a lang="es" href="about.html" class="w3-bar-item w3-button w3-hover-blue">Sobre Nosotros</a>
+      <a lang="ga" href="about.html" class="w3-bar-item w3-button w3-hover-blue">Faoi Sinn</a>
+      <a lang="gv" href="about.html" class="w3-bar-item w3-button w3-hover-blue">Mooin</a>
+      <a lang="ja" href="about.html" class="w3-bar-item w3-button w3-hover-blue">就いて</a>
+      <a lang="en" href="contact.html" class="w3-bar-item w3-button w3-hover-blue">Contact Us</a>
+      <a lang="es" href="contact.html" class="w3-bar-item w3-button w3-hover-blue">Contactar Con Nosotros</a>
+      <a lang="ga" href="contact.html" class="w3-bar-item w3-button w3-hover-blue">Teagmháil Sinn</a>
+      <a lang="gv" href="contact.html" class="w3-bar-item w3-button w3-hover-blue">Coventyn Shin</a>
+      <a lang="ja" href="contact.html" class="w3-bar-item w3-button w3-hover-blue">連絡</a>
+      <a href="blog.html" class="w3-bar-item w3-button w3-hover-blue">Blog</a>
+    </div>
+  </div>
+  <br>
+  <br>
+<center>
+  <font size="15">
+    <class lang="en">Valspir Games</class>
+    <class lang="ga">Cluichí Valspir</class>
+    <class lang="ja">ビャルスピアゲーム</class>
+    <class lang="gv">Cloie Valspir</class>
+    <class lang="es">Valspir Juegos</class>
+  </font>
+<br>
+  <font>
+    <class lang="en"> Welcome to the Valspir website, this is where we publish our terrible games. They really are terrible. Don't download these.</class>
+    <class lang="ja"> ビャルスピアへようこそ。ここにひどいゲームを出版します。ほんとうにひどいゲームだからダーンロードしないで下さい。</class>
+    <class lang="ga"> Fáilte go an suíomh Valspir. Seo é áit a foilsimid ar cluichí uafásach. Tá siad an-uafásach. Ná íoslódáil iad seo.</class>
+    <class lang="gv"> Failt gys y soiaghey Valspir. Shoh eh ynnyd da soilshee muid er cloie atçhimagh. T'ad yn-atçhimagh. Ny laad neose ad shoh.</class>
+    <class lang="es"> Bienvenido a el Valspir sitio web, Esta es donde nosotros publicar nuestros terrible juegos. Ellos realmente son terrible. No descargado estos.</class>
+  </font>
+    <br>
+  <font>
+      <class lang="en"> Valspir Games was created by Connor Young, Connor McGettigan, Jamie Tufnell, and Ben Patai.</class>
+      <class lang="ga"> Cluichí Valspir déanta ag Conchúr Young, Conchúr Mag Eiteagáin, Séimí Tufnell, agus Binn Patai.</class>
+      <class lang="gv"> Cloie Valspir jeant ec Connor Young, Connor Mac Ettigan, Jamie Tufnell, and Ben Patai.</class>
+  </font>
+
+  <br>
+  <font size="6">
+    <class lang="en"> Shadows and Souls</class>
+  </font>
+  <font size="3">
+    <br>
+    <class lang="en">Shadows and Souls is an adventure game based on Zork, it is based in multiple realms and has a few boss fights.</class>
+    <br>
+    <a href="sas.html"><class lang="en">Click here to learn more</class></a>
+  </font>
+  <br>
+
+<br>
+<center lang="en">
+<a lang="en" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="15px" width="15px"></img> Download</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="en" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="15px" width="15px"></img> Download</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="en" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="15px" width="15px"></img> Download</a>
+</center>
+<center lang="ga">
+<a lang="ga" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  Íoslódáil</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ga" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  Íoslódáil</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ga" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  Íoslódáil</a>
+</center>
+<center lang="ja">
+<a lang="ja" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  ダウンロード</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ja" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  ダウンロード</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="ja" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  ダウンロード</a>
+</center>
+<center lang="gv">
+<a lang="gv" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  Laad Neose</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="gv" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  Laad Neose</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="gv" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  Laad Neose</a>
+</center>
+<center lang="es">
+<a lang="es" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASmacOS" class="btn"><i class="fa fa-download"></i><img src="images/apple.png" height="19px" width="19px"></img>  Descargado</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="es" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASWindows.exe" class="btn"><i class="fa fa-download"></i><img src="images/windows.png" height="19px" width="19px"></img>  Descargado</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<a lang="es" href="https://github.com/Valspir/valspir.github.io/releases/download/Valspir/SASLinux" class="btn"><i class="fa fa-download"></i><img src="images/linux.png" height="19px" width="19px"></img>  Descargado</a>
+</center>
+<br>
+<br>
+<center>
+<font size="6">
+
+
+  <class lang="en">Shadows and Souls 2: Sins Unite</class>
+  <class lang="ga">Scáthanna agus Anamacha 2: Aontaigh</class>
+  <class lang="ja">影と心２：あう</class>
+  <class lang="gv">Scaayn as Anmeeyn 2: Coardail</class>
+  <br>
+</font>
+<font style="size: 2px;">
+  <class lang="en">Shadows and Souls 2 is now in the beta stages, this game features multiplayer. For a public beta release, we need more storyline as we currently have 3 locations.<br> The servers can be hosted by anyone, and we will also have a dedicated server running 24/7 (hopefully).<br> This game will be continuously developed and has an expansive storyline with multiple side quests in the game!<br> Once again, I am very happy to announce SAS2, I hope you enjoy playing this game, I know I am enjoying making it</class>  </font>
+<br>
+<br>
+</body>

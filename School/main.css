@@ -69,9 +69,8 @@ body.es :lang(en), body.es :lang(ga), body.es :lang(ja), body.es :lang(gv) {
   display: none;
 }
 body {
-    height: 824px;
-    background-color: #3b3e40;
-    background-image: linear-gradient(to bottom, #1c1c1c, #3b3e40);
+  background-color: #737373;
+  background-image: url("bg.png");;
 }
 pre {
     color: #53aff5;
