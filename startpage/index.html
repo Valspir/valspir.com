@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("lp3.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.links {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.column {
+  display: inline-block;
+  width: 10%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+<script>
+  function getInputValue(){
+      // Selecting the input element and get its value
+      var inputVal = document.getElementById("search").value;
+
+      // Displaying the value
+      window.location.href = "http://www.google.com/search?q=" + inputVal;
+  }
+</script>
+</head>
+<body>
+
+<div class="bg-image"></div>
+<div class="links">
+  <form>
+    <input type="text" placeholder="ADD SEARCH ICON" id="search">
+    <button type="button" onclick="getInputValue();">Get Value</button>
+  </form>
+  <h2>Quick Links</h2>
+  <div class="row">
+    <h2>Social</h2>
+    <div class="column">
+      <a href="https://www.gmail.com"><img src="icons/gmail.png" width="60px"/></a>
+    </div>
+    <div class="column">
+      <a href="https://www.reddit.com"><img src="icons/reddit.webp" width="60px"/></a>
+    </div>
+    <div class="column">
+      <a href="https://www.twitter.com"><img src="icons/twitter.png" width="60px"/></a>
+    </div>
+
+  </div>
+  <h2>Programming</h2>
+  <div class="row">
+    <div class="column">
+      <!--<h3>W3Schools</h3>-->
+      <a href="https://www.w3schools.com"><img src="icons/w3.png" width="60px"/><a>
+    </div>
+    <div class="column">
+      <!--<h3>SecJuice</h3>-->
+      <a href="https://www.secjuice.com"><img src="icons/secjuice.png" width="60px"/></a>
+    </div>
+    <div class="column">
+      <!--<h3>Twitter</h3>-->
+      <a href="https://www.stackoverflow.com"><img src="icons/so.png" width="60px"/></a>
+    </div>
+  </div>
+  <h2>Entertainment</h2>
+  <div class="row">
+    <div class="column">
+      <a href="https://www.youtube.com"><img src="icons/yt.png" style="position: relative; bottom: 7px;" width="60px"/></a>
+    </div>
+    <div class="column">
+      <a href="https://www.netflix.com"><img src="icons/netflix.webp" width="60px"/></a>
+    </div>
+    <div class="column">
+      <a href="https://www.stan.com.au/"><img src="icons/stan.png" width="60px"/></a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
